@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Animação em JavaScript</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        // Obtém o elemento canvas e seu contexto
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        // Posição inicial do objeto
+        var x = 50;
+        var y = 50;
+
+        // Velocidade do objeto
+        var vx = 5;
+        var vy = 2;
+
+        // Função para desenhar o objeto na tela
+        function draw() {
+            // Limpa o canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Desenha o objeto
+            ctx.fillStyle = "red";
+            ctx.fillRect(x, y, 50, 50);
+
+            // Atualiza a posição do objeto
+            x += vx;
+            y += vy;
+
+            // Inverte a direção se o objeto atingir as bordas do canvas
+            if (x + 50 > canvas.width || x < 0) {
+                vx *= -1;
+            }
+            if (y + 50 > canvas.height || y < 0) {
+                vy *= -1;
+            }
+
+            // Chama a função draw novamente para criar uma animação contínua
+            requestAnimationFrame(draw);
+        }
+
+        // Inicia a animação
+        draw();
+    </script>
+</body>
+</html>
