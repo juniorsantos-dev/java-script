@@ -1,0 +1,42 @@
+body{
+    
+    background-color: rgb(50, 130, 235);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px white;
+    background-color: rgb(9, 9, 224)
+    
+
+
+}
+
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+   
+
+
+}
+
+select#flista{
+    width: 150px;
+}
+
+footer{
+    color: blue;
+    background-color: aliceblue;
+    font-style: italic;
+    text-align: center;
+
+
+}

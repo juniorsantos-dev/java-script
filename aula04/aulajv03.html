@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo A</title>
+    <style>
+        body{
+            background-color: rgb(133, 133, 247);
+            color: white;
+      
+        }
+
+        p{
+            font-size: 20px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo</h1>
+    <p>
+        Estamos iniciando os estudos em javascript
+        para criar paginas web com interatividade
+
+    </p>
+
+    <script> 
+    /*E feita a conversão do numero, de string que e o prompt, para number*/
+    var n1 = Number.parseInt(window.prompt('Digite um numero:'))
+    var n2 = Number.parseInt(window.prompt('Digite outro numero:'))
+    var s = n1 + n2
+    /*Quando utilizar so o number, ele adiciona numero inteiro ou convertido*/
+    window.alert(`A soma entre ${n1} e ${n2} e igual a ${s}`)
+    </script>
+</body>
+</html>   

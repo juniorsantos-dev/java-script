@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabuada</title>
+    <script>
+        function tabuada() {
+            let num = document.getElementById('txtn');
+            let tab = document.getElementById('seltab');
+
+            if (num.value.length === 0) {
+                window.alert('Digite um número');
+            } else {
+                tab.innerHTML = ''; // Limpar as opções anteriores
+
+                let n = Number(num.value);
+                let c = 1;
+
+                while (c <= 10) {
+                    let item = document.createElement('option');
+                    item.text = `${n} x ${c} = ${n * c}`;
+                    tab.appendChild(item);
+                    c++;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Tabuada Generator</h1>
+    <label for="txtn">Digite um número: </label>
+    <input type="number" id="txtn">
+    <button onclick="tabuada()">Gerar Tabuada</button>
+    <br>
+    <select id="seltab">
+        <!-- Opções da tabuada serão adicionadas aqui -->
+    </select>
+</body>
+</html>
